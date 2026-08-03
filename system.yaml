@@ -110,8 +110,9 @@ edges:
 - id: e1
   condition: null
   transform:
-    mappings: null
-    strategy: passthrough
+    mappings:
+      transaction: $
+    strategy: explicit_mapping
     llm_model: null
     llm_prompt: null
   memory_keys: null
@@ -122,8 +123,9 @@ edges:
 - id: e2
   condition: null
   transform:
-    mappings: null
-    strategy: passthrough
+    mappings:
+      data: $
+    strategy: explicit_mapping
     llm_model: null
     llm_prompt: null
   memory_keys: null

@@ -40,12 +40,12 @@ for _agent in AGENTS:
 # the only two apply_transform() below actually reads.
 EDGE_TRANSFORM_BY_TARGET = {
     "n2": {
-        "strategy": "passthrough",
-        "mappings": json.loads("null"),
+        "strategy": "explicit_mapping",
+        "mappings": json.loads("{\"transaction\": \"$\"}"),
     },
     "n3": {
-        "strategy": "passthrough",
-        "mappings": json.loads("null"),
+        "strategy": "explicit_mapping",
+        "mappings": json.loads("{\"data\": \"$\"}"),
     },
 }
 
