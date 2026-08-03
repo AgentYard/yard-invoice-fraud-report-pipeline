@@ -1,0 +1,13 @@
+system_id: a3454533-cca7-4537-aae1-4548e9376d83
+node_id: n1
+transport_mode: centralized
+input_mode: http
+output_mode: sync
+memory:
+  reads: []
+  writes:
+  - invoice_extraction
+  scope: system
+failure:
+  mode: retry
+  max_retries: 3
