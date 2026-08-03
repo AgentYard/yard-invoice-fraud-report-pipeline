@@ -472,37 +472,38 @@ data:
     \    strategy: passthrough\nenvironment: dev\nerror_recovery:\n  circuit_breaker_enabled:\
     \ true\n  circuit_breaker_reset_seconds: 60\n  circuit_breaker_threshold: 3\n\
     \  dead_letter_queue: true\n  global_timeout_seconds: 300\n  max_total_retries:\
-    \ 10\n  on_system_failure: return_partial\ngithub_repo_url: null\nglobal_token:\
-    \ dev-token\nid: a3454533-cca7-4537-aae1-4548e9376d83\nmemory_config:\n  initial_context:\
-    \ null\n  max_memory_keys: 100\n  memory_ttl_seconds: null\n  open: true\n  persistence:\
-    \ session\n  schema: null\n  strategy: shared_bus\n  strict: false\nname: Invoice\
-    \ Fraud Report Pipeline\nnamespace: acme/finance\nnodes:\n- agent_id: 4dacef11-4a27-4344-975b-08283bcff78d\n\
+    \ 10\n  on_system_failure: return_partial\ngithub_repo_url: https://github.com/AgentYard/yard-invoice-fraud-report-pipeline\n\
+    global_token: dev-token\nid: a3454533-cca7-4537-aae1-4548e9376d83\nmemory_config:\n\
+    \  initial_context: null\n  max_memory_keys: 100\n  memory_ttl_seconds: null\n\
+    \  open: true\n  persistence: session\n  schema: null\n  strategy: shared_bus\n\
+    \  strict: false\nname: Invoice Fraud Report Pipeline\nnamespace: acme/finance\n\
+    nodes:\n- agent_id: 4dacef11-4a27-4344-975b-08283bcff78d\n  agent_version: latest\n\
+    \  config:\n    cache_ttl_seconds: null\n    fallback_agent_id: null\n    input_mapping:\
+    \ null\n    memory_access: read-write\n    on_failure: abort\n    output_mapping:\
+    \ null\n    rate_limit_rpm: null\n    retries: 3\n    retry_backoff: fixed\n \
+    \   retry_delay_ms: 1000\n    system_prompt: null\n    timeout_seconds: 30\n \
+    \ id: n1\n  position:\n    x: 0.0\n    y: 0.0\n- agent_id: 2f565a6b-06b9-4a66-a882-4df2238dc1d4\n\
     \  agent_version: latest\n  config:\n    cache_ttl_seconds: null\n    fallback_agent_id:\
     \ null\n    input_mapping: null\n    memory_access: read-write\n    on_failure:\
     \ abort\n    output_mapping: null\n    rate_limit_rpm: null\n    retries: 3\n\
     \    retry_backoff: fixed\n    retry_delay_ms: 1000\n    system_prompt: null\n\
-    \    timeout_seconds: 30\n  id: n1\n  position:\n    x: 0.0\n    y: 0.0\n- agent_id:\
-    \ 2f565a6b-06b9-4a66-a882-4df2238dc1d4\n  agent_version: latest\n  config:\n \
+    \    timeout_seconds: 30\n  id: n2\n  position:\n    x: 300.0\n    y: 0.0\n- agent_id:\
+    \ 69d1924f-740d-47a0-9c6c-75db27f1ace6\n  agent_version: latest\n  config:\n \
     \   cache_ttl_seconds: null\n    fallback_agent_id: null\n    input_mapping: null\n\
     \    memory_access: read-write\n    on_failure: abort\n    output_mapping: null\n\
     \    rate_limit_rpm: null\n    retries: 3\n    retry_backoff: fixed\n    retry_delay_ms:\
-    \ 1000\n    system_prompt: null\n    timeout_seconds: 30\n  id: n2\n  position:\n\
-    \    x: 300.0\n    y: 0.0\n- agent_id: 69d1924f-740d-47a0-9c6c-75db27f1ace6\n\
-    \  agent_version: latest\n  config:\n    cache_ttl_seconds: null\n    fallback_agent_id:\
-    \ null\n    input_mapping: null\n    memory_access: read-write\n    on_failure:\
-    \ abort\n    output_mapping: null\n    rate_limit_rpm: null\n    retries: 3\n\
-    \    retry_backoff: fixed\n    retry_delay_ms: 1000\n    system_prompt: null\n\
-    \    timeout_seconds: 30\n  id: n3\n  position:\n    x: 600.0\n    y: 0.0\nobservability:\n\
-    \  log_level: info\n  metrics_enabled: true\n  trace_enabled: true\n  trace_include_io:\
-    \ true\n  trace_include_memory: true\n  webhook_on_complete: null\n  webhook_on_failure:\
-    \ null\norchestrator_config:\n  allow_partial_results: null\n  conditions: null\n\
-    \  engine_type: chain_executor\n  fallback_agent_id: null\n  fanout_timeout_seconds:\
-    \ null\n  llm_model: null\n  llm_temperature: null\n  max_iterations: 10\n  max_refinement_loops:\
-    \ null\n  merge_agent_id: null\n  merge_strategy: null\n  quality_metric_key:\
-    \ null\n  quality_threshold: null\n  reflection_enabled: null\n  reflection_prompt:\
-    \ null\n  routing_mode: sequential\n  system_prompt: ''\n  transport_mode: centralized\n\
-    owner: dev-admin\nstatus: draft\nupdated_at: '2026-08-03T15:43:01.855005Z'\nversion:\
-    \ 1\n"
+    \ 1000\n    system_prompt: null\n    timeout_seconds: 30\n  id: n3\n  position:\n\
+    \    x: 600.0\n    y: 0.0\nobservability:\n  log_level: info\n  metrics_enabled:\
+    \ true\n  trace_enabled: true\n  trace_include_io: true\n  trace_include_memory:\
+    \ true\n  webhook_on_complete: null\n  webhook_on_failure: null\norchestrator_config:\n\
+    \  allow_partial_results: null\n  conditions: null\n  engine_type: chain_executor\n\
+    \  fallback_agent_id: null\n  fanout_timeout_seconds: null\n  llm_model: null\n\
+    \  llm_temperature: null\n  max_iterations: 10\n  max_refinement_loops: null\n\
+    \  merge_agent_id: null\n  merge_strategy: null\n  quality_metric_key: null\n\
+    \  quality_threshold: null\n  reflection_enabled: null\n  reflection_prompt: null\n\
+    \  routing_mode: sequential\n  system_prompt: ''\n  transport_mode: centralized\n\
+    owner: dev-admin\nstatus: deployed\nupdated_at: '2026-08-03T15:43:57.254257Z'\n\
+    version: 3\n"
   transport: http
 kind: ConfigMap
 metadata:
